@@ -14,7 +14,7 @@ Slice make(int len, int cap);
 void free_slice(Slice &s);
 
 // Append a new element to the slice.
-Slice append(Slice &s, int v);
+Slice append(Slice s, int v);
 
 // Set the value at given index.
 void set_value(Slice &s, int index, int value);

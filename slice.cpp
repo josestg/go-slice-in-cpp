@@ -28,7 +28,7 @@ Slice make(int len, int cap) {
 void free_slice(Slice &s) { free(s.data); }
 
 // Append a new element to the slice.
-Slice append(Slice &s, int v) {
+Slice append(Slice s, int v) {
   if (s.len == s.cap) {
     // grow the backing array by 2x or 1 if the capacity is 0.
     int new_cap = std::max(2 * s.cap, 1);
