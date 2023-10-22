@@ -4,6 +4,7 @@
 int main() {
   Slice s = make(0, 1);
   std::cout << "slice created: " << s << std::endl;
+  std::cout << "size of slice: " << sizeof(s) << std::endl;
 
   int last_cap = s.cap;
   for (int i = 0; i < 10; i++) {
@@ -21,6 +22,7 @@ int main() {
   set_value(s, 0, 100);
 
   std::cout << "slice after update: " << s << std::endl;
+  std::cout << "size of slice: " << sizeof(s) << std::endl;
   free_slice(s);
   return 0;
 }
