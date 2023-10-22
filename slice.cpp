@@ -44,8 +44,8 @@ Slice append(Slice s, int v) {
     // update the capacity.
     s.cap = new_cap;
   }
-  s.data[s.len] = v;
   s.len++;
+  set_value(s, s.len - 1, v); // set the value at the end of the slice.
   return s;
 }
 
